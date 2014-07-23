@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <?php
 require('db.php');
 //Output appropriate status
@@ -22,6 +21,7 @@ if(empty($_GET['r'])) {
  }
 }
 ?>
+<!DOCTYPE html>
 <html>
  <head>
   <meta charset="UTF-8"/>
