@@ -6,6 +6,7 @@ if(!empty($_GET['r'])) {
 }
 require('config.php');
 ?>
+<!DOCTYPE html>
 <html>
  <head>
   <meta charset="UTF-8"/>
