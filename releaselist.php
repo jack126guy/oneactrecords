@@ -1,5 +1,5 @@
 <?php
-include('db.php');
+require_once('db.php');
 $releasequery = $sql->query('SELECT releaseid, releasename, releasedate, releasecover FROM ' . $sql->get_table_prefix() . 'releases ORDER BY releasedate DESC');
 while($releaserow = $sql->fetch_assoc($releasequery)) {
 	//Check hidden release

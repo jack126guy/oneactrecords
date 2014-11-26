@@ -1,5 +1,6 @@
 <?php
-require('db.php');
+require_once('db.php');
+require_once('config_general.php');
 //Output appropriate status
 if(empty($_GET['r'])) {
 	$releasename = 'Nonexistent Release';
