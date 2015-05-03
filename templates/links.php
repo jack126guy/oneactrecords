@@ -7,7 +7,7 @@ if(!empty($tparams['releaseid'])) {
 	} else {
 		if($sql->num_rows($linksquery) > 0) {
 			while($linksrow = $sql->fetch_assoc($linksquery)) {
-				echo '<li><span class="title"><a href="' . $linksrow['linkref'] . '">' . $linksrow['linkname'] . '</a></span><span class="desc">' . $linksrow['linkdesc'] . '</span><span class="techspec">' . $linksrow['linktech'] . '</span></li>';
+				echo '<li><span class="title"><a href="' . $linksrow['linkref'] . '">' . $linksrow['linkname'] . '</a></span> <span class="desc">' . $linksrow['linkdesc'] . '</span> <span class="techspec">' . $linksrow['linktech'] . '</span></li>';
 			}
 		}
 	}
@@ -18,7 +18,7 @@ if(!empty($tparams['releaseid'])) {
 	} else {
 		if($sql->num_rows($clinksquery) > 0) {
 			while($clinksrow = $sql->fetch_assoc($clinksquery)) {
-				echo '<li><span class="title"><a href="' . $clinksrow['linkref'] . '">' . (empty($clinksrow['linkname']) ? $clinksrow['commname'] : $clinksrow['linkname']) . '</a></span><span class="desc">' . (empty($clinksrow['linkdesc']) ? $clinksrow['commdesc'] : $clinksrow['linkdesc']) . '</span><span class="techspec">' . (empty($clinksrow['linktech']) ? $clinksrow['commtech'] : $clinksrow['linktech']) . '</span></li>';
+				echo '<li><span class="title"><a href="' . $clinksrow['linkref'] . '">' . (empty($clinksrow['linkname']) ? $clinksrow['commname'] : $clinksrow['linkname']) . '</a></span> <span class="desc">' . (empty($clinksrow['linkdesc']) ? $clinksrow['commdesc'] : $clinksrow['linkdesc']) . '</span> <span class="techspec">' . (empty($clinksrow['linktech']) ? $clinksrow['commtech'] : $clinksrow['linktech']) . '</span></li>';
 			}
 		}
 	}
