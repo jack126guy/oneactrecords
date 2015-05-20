@@ -22,7 +22,11 @@ class SQL {
 		return $result->fetch_assoc();
 	}
 	function error() {
-		return $this->mysqliconn->error;
+		if(mysqli_connect_error()) {
+			return mysqli_connect_error();
+		} else {
+			return $this->mysqliconn->error;
+		}
 	}
 	function get_table_prefix() {
 		return $this->tblprfx;
