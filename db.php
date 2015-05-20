@@ -5,7 +5,7 @@ class SQL {
 	private $tblprfx;
 	function __construct($hostname, $username, $password, $tableprefix) {
 		$this->mysqliconn = new mysqli($hostname, $username, $password);
-		$this->mysqliconn->set_charset('utf8');
+		$this->mysqliconn->set_charset('utf8mb4');
 		date_default_timezone_set('UTC');
 		$this->tblprfx = $tableprefix;
 	}
