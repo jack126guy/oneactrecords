@@ -23,7 +23,7 @@ Versions before 1.0 are not yet ready for general use. Using these versions requ
 ## Server Requirements
 
 * PHP 5.1.0 or later
-* MySQL 5.0 or later
+* MySQL 4.1 or later (5.5.3 or later recommended)
 
 ## Information Files
 

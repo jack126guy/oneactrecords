@@ -3,9 +3,9 @@ require_once('config_db.php');
 class SQL {
 	private $mysqliconn;
 	private $tblprfx;
-	function __construct($hostname, $username, $password, $tableprefix) {
+	function __construct($hostname, $username, $password, $tableprefix, $charset) {
 		$this->mysqliconn = new mysqli($hostname, $username, $password);
-		$this->mysqliconn->set_charset('utf8mb4');
+		$this->mysqliconn->set_charset($charset);
 		date_default_timezone_set('UTC');
 		$this->tblprfx = $tableprefix;
 	}
@@ -35,6 +35,6 @@ class SQL {
 		return $this->mysqliconn->real_escape_string($string); 
 	}
 }
-$sql = new SQL($config['db_host'], $config['db_user'], $config['db_pass'], $config['db_tableprefix']);
+$sql = new SQL($config['db_host'], $config['db_user'], $config['db_pass'], $config['db_tableprefix'], $config['db_charset']);
 $sql->select_db($config['db_db']);
 ?>
