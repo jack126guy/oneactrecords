@@ -4,5 +4,5 @@ $config['db_user'] = '';
 $config['db_pass'] = '';
 $config['db_db'] = '';
 $config['db_tableprefix'] = '';
-$config['artist'] = 'One Act';
+$config['db_charset'] = 'utf8'; //You should change this to 'utf8mb4' with MySQL 5.5.3 or later
 ?>
