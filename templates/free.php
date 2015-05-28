@@ -7,6 +7,8 @@ if(!empty($tparams['releaseid']) && ($tparams['secpos'] >= 0)) {
 		if($sql->num_rows($freesecquery) > 0) {
 			$freesecrow = $sql->fetch_assoc($freesecquery);
 			echo $freesecrow['seccontent'];
+		} else {
+			echo '<p>Could not find content!</p>';
 		}
 	}
 }
