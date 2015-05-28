@@ -4,14 +4,15 @@ One Act Records is a lightweight program for creating a music website. It is des
 
 See it in action for my music ([126mix](http://anon126.tk/126mix), [Jack "Fox" Grayson](http://jackfoxgrayson.tk/music))
 
-The latest version is 0.0.2.
+The latest version is 0.0.2.1.
 
 ## Roadmap
 
 (If I ever get around to this)
 
 * v0.0.1 - Content on website
-* v0.0.2 - *Current version*: Minor fixes (already on Github, plus possibly more) *(definitely more, and also a new template)*
+* v0.0.2 - Minor fixes (already on Github, plus possibly more) *(definitely more, and also a new template)*
+* v0.0.2.1 - *Current version*: Hotfix release to fix stylesheet references
 * v0.0.3 - URL rewriting, improve template loading, skins
 * v0.1 - *First fully documented version*
 * v1.0 - *First usable version*

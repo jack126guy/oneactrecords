@@ -10,8 +10,7 @@ if(!empty($_GET['r'])) {
 	<head>
 		<meta charset="UTF-8"/>
 		<title>Awesome Music</title>
-		<link rel="stylesheet" type="text/css" href="../styles.css"/>
-		<link rel="stylesheet" type="text/css" href="musicstyles.css"/>
+		<link rel="stylesheet" type="text/css" href="styles.css"/>
 	</head>
 	<body>
 		<h1>Recent Releases</h1>
