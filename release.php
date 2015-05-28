@@ -26,8 +26,7 @@ if(empty($_GET['r'])) {
  <head>
   <meta charset="UTF-8"/>
   <title>"<?php echo $releasename;?>" by <?php echo $config['artist']; ?></title>
-  <link rel="stylesheet" type="text/css" href="../styles.css"/>
-  <link rel="stylesheet" type="text/css" href="musicstyles.css"/>
+  <link rel="stylesheet" type="text/css" href="styles.css"/>
  </head>
  <body>
   <!-- common header -->
