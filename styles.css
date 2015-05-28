@@ -59,3 +59,8 @@ h2 {
 	width: 45%;
 	margin-left: 5%;
 }
+.hidden {
+	position: absolute;
+	left: -1000px;
+	top: auto;
+}
