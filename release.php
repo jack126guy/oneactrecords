@@ -45,7 +45,9 @@ if(empty($_GET['r'])) {
 				//release-specific header
 				echo $releaserow['releaseheader'];
 				//cover image
-				echo '<div><img class="cover" src="' . $releaserow['releasecover'] . '" alt="Cover for &quot;' . $releaserow['releasename'] . '&quot;"/></div>';
+				if($releaserow['releasecover']) {
+					echo '<div><img class="cover" src="' . $releaserow['releasecover'] . '" alt="Cover for &quot;' . $releaserow['releasename'] . '&quot;"/></div>';
+				}
 				//release date
 				$releasedate = strtotime($releaserow['releasedate']);
 				echo '<p class="releasedate">Released <time datetime="' . date('Y-m-d', $releasedate) . '">' . date('j F Y', $releasedate) . '</time></p>';
