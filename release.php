@@ -23,11 +23,12 @@ if(empty($_GET['r'])) {
 }
 ?>
 <!DOCTYPE html>
-<html>
+<html prefix="og: http://ogp.me/ns# music: http://ogp.me/ns/music#">
 	<head>
 		<meta charset="UTF-8"/>
 		<title>"<?php echo $releasename;?>" by <?php echo $config['artist']; ?></title>
 		<link rel="stylesheet" type="text/css" href="styles.css"/>
+		<?php include('releasemeta.php'); ?>
 	</head>
 	<body>
 		<!-- common header -->
