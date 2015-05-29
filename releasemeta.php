@@ -11,9 +11,11 @@ echo '<meta property="og:locale" content="' . $config['locale_language'] . ($con
 echo '<meta property="og:site_name" content="' . htmlspecialchars($config['artist']) . '\'s Music"/>';
 if($config['social_twitter_artisthandle']) {
 	echo '<meta property="twitter:creator" content="' . $config['social_twitter_artisthandle'] . '"/>';
+	echo '<meta property="twitter:site" content="' . $config['social_twitter_artisthandle'] . '"/>';
 }
 if($config['social_twitter_artistid']) {
 	echo '<meta property="twitter:creator:id" content="' . $config['social_twitter_artistid'] . '"/>';
+	echo '<meta property="twitter:site:id" content="' . $config['social_twitter_artistid'] . '"/>';
 }
 echo '<meta property="twitter:card" content="summary"/>';
 ?>
