@@ -32,7 +32,7 @@ class SQL {
 		return $this->tblprfx;
 	}
 	function real_escape_string($string) {
-		return $this->mysqliconn->real_escape_string($string); 
+		return $this->mysqliconn->real_escape_string($string);
 	}
 }
 $sql = new SQL($config['db_host'], $config['db_user'], $config['db_pass'], $config['db_tableprefix'], $config['db_charset']);
