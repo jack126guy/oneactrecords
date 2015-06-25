@@ -2,7 +2,7 @@
 
 One Act Records is a lightweight program for creating a music website. It is designed for amateur musicians: The name "One Act Records" is a parody of record label names, illustrating the belief that musicians do not need record labels to promote their music.
 
-See it in action for my music ([126mix](http://anon126.tk/126mix), [Jack "Fox" Grayson](http://jackfoxgrayson.tk/music))
+[See it in action](http://anon126.tk/cyanomixer) for my music.
 
 The latest version is 0.0.2.1.
 
