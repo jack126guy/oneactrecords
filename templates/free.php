@@ -1,6 +1,6 @@
 <?php
 if(!empty($tparams['releaseid']) && ($tparams['secpos'] >= 0)) {
-	$freesecquery = $sql->query('SELECT seccontent FROM ' . $sql->get_table_prefix() . 'freesecs WHERE releaseid = "' . $tparams['releaseid'] . '" AND secpos = ' . $tparams['secpos']);
+	$freesecquery = $sql->query('SELECT seccontent FROM `' . $sql->get_table_prefix() . 'freesecs` WHERE releaseid = \'' . $tparams['releaseid'] . '\' AND secpos = ' . $tparams['secpos']);
 	if($sql->error()) {
 		echo '<p>Error occured getting the content. Sorry :( Technical info: ' . $sql->error() . '</p>';
 	} else {
