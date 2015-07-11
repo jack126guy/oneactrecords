@@ -1,3 +1,3 @@
 <?php
-$config['artist'] = 'One Act';
+$oar_config['artist'] = 'One Act';
 ?>
