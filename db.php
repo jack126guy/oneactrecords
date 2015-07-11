@@ -35,6 +35,6 @@ class OAR_SQL {
 		return $this->mysqliconn->real_escape_string($string);
 	}
 }
-$oar_sql = new OAR_SQL($oar_config['db_host'], $oar_config['db_user'], $oar_config['db_pass'], $oar_config['db_tableprefix'], $oar_config['db_charset']);
-$oar_sql->select_db($oar_config['db_db']);
+$oar_sql = new OAR_SQL($oar_config['db']['host'], $oar_config['db']['user'], $oar_config['db']['pass'], $oar_config['db']['tableprefix'], $oar_config['db']['charset']);
+$oar_sql->select_db($oar_config['db']['db']);
 ?>
