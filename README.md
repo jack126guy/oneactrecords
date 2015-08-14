@@ -12,7 +12,8 @@ The latest version is 0.0.2.1.
 
 * v0.0.1 - Content on website
 * v0.0.2 - Minor fixes (already on Github, plus possibly more) *(definitely more, and also a new template)*
-* v0.0.2.1 - *Current version*: Hotfix release to fix stylesheet references
+* v0.0.2.1 - Hotfix release to fix stylesheet references
+* v0.0.2.2 - *Current version*: Style improvements and compatibility fixes
 * v0.0.3 - URL rewriting, improve template loading, skins
 * v0.1 - *First fully documented version*
 * v1.0 - *First usable version*
