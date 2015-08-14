@@ -7,7 +7,7 @@ if(empty($_GET['r'])) {
 	header('HTTP/1.1 404 Not Found');
 } else {
 	$releaseid = $sql->real_escape_string($_GET['r']);
-	$releasequery = $sql->query('SELECT * FROM ' . $sql->get_table_prefix() . 'releases WHERE releaseid = "' . $releaseid . '"');
+	$releasequery = $sql->query('SELECT * FROM `' . $sql->get_table_prefix() . 'releases` WHERE releaseid = \'' . $releaseid . '\'');
 	if($sql->error()) {
 		$releasename = 'Release We Couldn\'t Get';
 		header('HTTP/1.1 500 Internal Server Error');
@@ -26,7 +26,8 @@ if(empty($_GET['r'])) {
 <html>
 	<head>
 		<meta charset="UTF-8"/>
-		<title>"<?php echo $releasename;?>" by <?php echo $config['artist']; ?></title>
+		<meta name="viewport" content="width=device-width, initial-scale=1"/>
+		<title>"<?php echo $releasename;?>" by <?php echo htmlspecialchars($config['artist']); ?></title>
 		<link rel="stylesheet" type="text/css" href="styles.css"/>
 	</head>
 	<body>
@@ -53,7 +54,7 @@ if(empty($_GET['r'])) {
 				//description
 				echo $releaserow['releasedesc'];
 				//sections
-				$secquery = $sql->query('SELECT * FROM ' . $sql->get_table_prefix(). 'sections WHERE releaseid = "' . $releaseid . '" ORDER BY secpos ASC');
+				$secquery = $sql->query('SELECT * FROM `' . $sql->get_table_prefix(). 'sections` WHERE releaseid = \'' . $releaseid . '\' ORDER BY secpos ASC');
 				if($sql->error()) {
 					echo '<p>Sorry, we couldn\'t get some information for this release. Technical info: ' . $sql->error() . '</p>';
 				} else {

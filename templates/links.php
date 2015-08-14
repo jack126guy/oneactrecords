@@ -1,7 +1,7 @@
 <?php
 if(!empty($tparams['releaseid'])) {
 	echo '<ul>';
-	$linksquery = $sql->query('SELECT * FROM ' . $sql->get_table_prefix() . 'links WHERE releaseid = "' . $tparams['releaseid'] . '" ORDER BY linkpos ASC');
+	$linksquery = $sql->query('SELECT * FROM `' . $sql->get_table_prefix() . 'links` WHERE releaseid = \'' . $tparams['releaseid'] . '\' ORDER BY linkpos ASC');
 	if($sql->error()) {
 		echo '<li>Error occured getting the links. Sorry :( Technical info: ' . $sql->error() . '</li>';
 	} else {
@@ -12,7 +12,7 @@ if(!empty($tparams['releaseid'])) {
 		}
 	}
 	//Get common links
-	$clinksquery = $sql->query('SELECT * FROM ' . $sql->get_table_prefix() . 'linkforms INNER JOIN ' . $sql->get_table_prefix() . 'commonlinks ON ' . $sql->get_table_prefix() . 'linkforms.formname = ' . $sql->get_table_prefix() . 'commonlinks.formname WHERE releaseid = "' . $tparams['releaseid'] . '" ORDER BY formpos ASC');
+	$clinksquery = $sql->query('SELECT * FROM `' . $sql->get_table_prefix() . 'linkforms` INNER JOIN `' . $sql->get_table_prefix() . 'commonlinks` ON `' . $sql->get_table_prefix() . 'linkforms`.formname = `' . $sql->get_table_prefix() . 'commonlinks`.formname WHERE releaseid = \'' . $tparams['releaseid'] . '\' ORDER BY formpos ASC');
 	if($sql->error()) {
 		echo '<li>Error occured getting the links. Sorry :( Technical info: ' . $sql->error() . '</li>';
 	} else {
