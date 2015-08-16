@@ -7,15 +7,15 @@ echo '<meta property="og:type" content="music.song"/>';
 echo '<meta property="og:image" content="' . $releaserow['releasecover'] . '"/>';
 echo '<meta property="og:url" content="http://' . $_SERVER['SERVER_NAME'] . dirname($_SERVER['REQUEST_URI']) . '/release.php?r=' . $releaseid . '"/>';
 echo '<meta property="og:description" content="' . strip_tags($releaserow['releasedesc']) . '"/>';
-echo '<meta property="og:locale" content="' . $config['locale_language'] . ($config['locale_region'] ? '_' . $config['locale_region'] : '') . '"/>';
-echo '<meta property="og:site_name" content="' . htmlspecialchars($config['artist']) . '\'s Music"/>';
-if($config['social_twitter_artisthandle']) {
-	echo '<meta property="twitter:creator" content="' . $config['social_twitter_artisthandle'] . '"/>';
-	echo '<meta property="twitter:site" content="' . $config['social_twitter_artisthandle'] . '"/>';
+echo '<meta property="og:locale" content="' . $oar_config['locale']['language'] . ($oar_config['locale']['region'] ? '_' . $oar_config['locale']['region'] : '') . '"/>';
+echo '<meta property="og:site_name" content="' . htmlspecialchars($oar_config['artist']) . '\'s Music"/>';
+if($oar_config['social']['twitter']['artisthandle']) {
+	echo '<meta property="twitter:creator" content="' . $oar_config['social']['twitter']['artisthandle'] . '"/>';
+	echo '<meta property="twitter:site" content="' . $oar_config['social']['twitter']['artisthandle'] . '"/>';
 }
-if($config['social_twitter_artistid']) {
-	echo '<meta property="twitter:creator:id" content="' . $config['social_twitter_artistid'] . '"/>';
-	echo '<meta property="twitter:site:id" content="' . $config['social_twitter_artistid'] . '"/>';
+if($oar_config['social']['twitter']['artistid']) {
+	echo '<meta property="twitter:creator:id" content="' . $oar_config['social']['twitter']['artistid'] . '"/>';
+	echo '<meta property="twitter:site:id" content="' . $oar_config['social']['twitter']['artistid'] . '"/>';
 }
 echo '<meta property="twitter:card" content="summary"/>';
 ?>
