@@ -1,5 +1,6 @@
 <?php
 require_once(dirname(__FILE__) . '/db.php');
+include_once(dirname(__FILE__) . '/../config/general.php');
 $releasequery = $oar_sql->query('SELECT releaseid, releasename, releasedate, releasecover FROM `' . $oar_sql->get_table_prefix() . 'releases` ORDER BY releasedate DESC');
 if($oar_sql->error()) {
 	echo '<div>Sorry, we couldn\'t get the list of releases. Technical info: ' . $oar_sql->error() . '</div>';
@@ -12,7 +13,12 @@ if($oar_sql->error()) {
 			continue;
 		}
 
-		echo '<li><a href="release.php?r=' . $releaserow['releaseid'] . '"><img class="thumb" alt="" src="' . $releaserow['releasecover'] . '"/><span class="releaselistitem">' . $releaserow['releasename'] . '</span></a></li>';
+		if($releaserow['releasecover']) {
+			$releasecover = $releaserow['releasecover'];
+		} else {
+			$releasecover = $oar_config['defaultcover'];
+		}
+		echo '<li><a href="release.php?r=' . $releaserow['releaseid'] . '"><img class="thumb" alt="" src="' . $releasecover . '"/><span class="releaselistitem">' . $releaserow['releasename'] . '</span></a></li>';
 	}
 	echo '</ul>';
 }
