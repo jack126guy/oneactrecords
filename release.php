@@ -39,7 +39,7 @@ if(empty($_GET['r'])) {
 			echo '<p>Sorry, we couldn\'t get the description for this release. Technical info: ' . $oar_sql->error() . '</p>';
 		} else {
 			//check for nonexistent release
-			if($oar_sql->num_rows($releasequery) == 0) {
+			if(empty($_GET['r']) || $oar_sql->num_rows($releasequery) == 0) {
 				echo '<p>Sorry, we couldn\'t find this release. Check the URL and try again. Or, <a href=".">head home</a>.</p>';
 			} else {
 				//release-specific header
