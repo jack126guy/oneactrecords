@@ -1,5 +1,5 @@
 <?php
-require_once('db.php');
+require_once(dirname(__FILE__) . '/db.php');
 $releasequery = $oar_sql->query('SELECT releaseid, releasename, releasedate, releasecover FROM `' . $oar_sql->get_table_prefix() . 'releases` ORDER BY releasedate DESC');
 if($oar_sql->error()) {
 	echo '<div>Sorry, we couldn\'t get the list of releases. Technical info: ' . $oar_sql->error() . '</div>';

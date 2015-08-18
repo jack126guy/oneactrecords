@@ -1,6 +1,6 @@
 <?php
-require_once('include/db.php');
-require_once('config/general.php');
+require_once(dirname(__FILE__) . '/include/db.php');
+require_once(dirname(__FILE__) . '/config/general.php');
 //Output appropriate status
 if(empty($_GET['r'])) {
 	$releasename = 'Nonexistent Release';

@@ -1,5 +1,5 @@
 <?php
-require_once('../config/db.php');
+require_once(dirname(__FILE__) . '/../config/db.php');
 class OAR_SQL {
 	private $mysqliconn;
 	private $tblprfx;
