@@ -15,6 +15,6 @@ if(!empty($_GET['r'])) {
 	</head>
 	<body>
 		<h1>Recent Releases</h1>
-		<?php include('releaselist.php');?>
+		<?php include(dirname(__FILE__) . '/include/releaselist.php');?>
 	</body>
 </html>

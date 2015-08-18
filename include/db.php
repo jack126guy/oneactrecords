@@ -1,6 +1,6 @@
 <?php
-require_once('config_db.php');
-class SQL {
+require_once(dirname(__FILE__) . '/../config/db.php');
+class OAR_SQL {
 	private $mysqliconn;
 	private $tblprfx;
 	function __construct($hostname, $username, $password, $tableprefix, $charset) {
@@ -35,6 +35,6 @@ class SQL {
 		return $this->mysqliconn->real_escape_string($string);
 	}
 }
-$sql = new SQL($config['db_host'], $config['db_user'], $config['db_pass'], $config['db_tableprefix'], $config['db_charset']);
-$sql->select_db($config['db_db']);
+$oar_sql = new OAR_SQL($oar_config['db']['host'], $oar_config['db']['user'], $oar_config['db']['pass'], $oar_config['db']['tableprefix'], $oar_config['db']['charset']);
+$oar_sql->select_db($oar_config['db']['db']);
 ?>
