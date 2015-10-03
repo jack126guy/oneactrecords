@@ -4,7 +4,7 @@ One Act Records is a lightweight program for creating a music website. It is des
 
 [See it in action](http://anon126.tk/cyanomixer) for my music.
 
-The latest version is 0.0.2.1.
+The latest version is 0.0.2.2.
 
 ## Roadmap
 
