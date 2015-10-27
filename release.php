@@ -50,7 +50,7 @@ if(empty($_GET['r'])) {
 				} else {
 					$releasecover = $oar_config['defaultcover'];
 				}
-				echo '<div><img class="cover" src="' . $releasecover . '" alt="Cover for &quot;' . $releaserow['releasename'] . '&quot;"/></div>';
+				echo '<div><img class="cover" src="' . $releasecover . '" alt="Cover for &quot;' . htmlspecialchars($releaserow['releasename']) . '&quot;"/></div>';
 				//release date
 				$releasedate = strtotime($releaserow['releasedate']);
 				echo '<p class="releasedate">Released <time datetime="' . date('Y-m-d', $releasedate) . '">' . date('j F Y', $releasedate) . '</time></p>';
