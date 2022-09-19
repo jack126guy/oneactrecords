@@ -1,5 +1,9 @@
 # One Act Records
 
+**Abandoned**: No new work has been done since 2015. The recommended replacement is [Rowboat Music](https://github.com/jack126guy/rowboat-music) which uses a static-site generator (Hugo). [Compatibility scripts](https://github.com/jack126guy/oar-to-rm-compat) are available to ensure that old URLs still work. Some (incomplete) documentation is available.
+
+---
+
 One Act Records is a lightweight program for creating a music website. It is designed for amateur musicians: The name "One Act Records" is a parody of record label names, illustrating the belief that musicians do not need record labels to promote their music.
 
 [See it in action](http://anon126.tk/cyanomixer) for my music.
@@ -30,5 +34,5 @@ Versions before 1.0 are not yet ready for general use. Using these versions requ
 ## Information Files
 
 * *MANUAL*: The user manual has instructions for musicians. *Currently, it only discusses general concepts, mainly having to do with how the site is presented to others. Version 1.0 will discuss how to add music.*
-* *TECHNICAL*: The technical information has details for developers, including how to write extensions.
+* *TECHNICAL*: The technical information has details for developers, including how to write extensions. *Currently, it only discusses the database schema.*
 * *LICENSE*: The license for this work is a 3-clause BSD license. (Refer to `LICENSE.txt` for details.)
